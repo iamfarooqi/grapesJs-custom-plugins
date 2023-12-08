@@ -4,72 +4,72 @@ export default (editor, opts = {}) => {
   const style = `<style>
 
     
-  .nav {
+  .first-nav {
     height: 50px;
     width: 100%;
     background-color: #4d4d4d;
     position: relative;
   }
   
-  .nav > .nav-header {
+  .first-nav > .first-nav-header {
     display: inline;
   }
   
-  .nav > .nav-header > .nav-title {
+  .first-nav > .first-nav-header > .first-nav-title {
     display: inline-block;
     font-size: 22px;
     color: #fff;
     padding: 10px 10px 10px 10px;
   }
   
-  .nav > .nav-btn {
+  .first-nav > .first-nav-btn {
     display: none;
   }
   
-  .nav > .nav-links {
+  .first-nav > .first-nav-links {
     display: inline;
     float: right;
     font-size: 18px;
   }
   
-  .nav > .nav-links > a {
+  .first-nav > .first-nav-links > a {
     display: inline-block;
     padding: 13px 10px 13px 10px;
     text-decoration: none;
     color: #efefef;
   }
   
-  .nav > .nav-links > a:hover {
+  .first-nav > .first-nav-links > a:hover {
     background-color: rgba(0, 0, 0, 0.3);
   }
   
-  .nav > #nav-check {
+  .first-nav > #first-nav-check {
     display: none;
   }
   
   @media (max-width:600px) {
-    .nav > .nav-btn {
+    .first-nav > .first-nav-btn {
       display: inline-block;
       position: absolute;
       right: 0px;
       top: 0px;
     }
-    .nav > .nav-btn > label {
+    .first-nav > .first-nav-btn > label {
       display: inline-block;
       width: 50px;
       height: 50px;
       padding: 13px;
     }
-    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    .first-nav > .first-nav-btn > label:hover,.first-nav  #first-nav-check:checked ~ .first-nav-btn > label {
       background-color: rgba(0, 0, 0, 0.3);
     }
-    .nav > .nav-btn > label > span {
+    .first-nav > .first-nav-btn > label > span {
       display: block;
       width: 25px;
       height: 10px;
       border-top: 2px solid #eee;
     }
-    .nav > .nav-links {
+    .first-nav > .first-nav-links {
       position: absolute;
       display: block;
       width: 100%;
@@ -80,14 +80,14 @@ export default (editor, opts = {}) => {
       top: 50px;
       left: 0px;
     }
-    .nav > .nav-links > a {
+    .first-nav > .first-nav-links > a {
       display: block;
       width: 100%;
     }
-    .nav > #nav-check:not(:checked) ~ .nav-links {
+    .first-nav > #first-nav-check:not(:checked) ~ .first-nav-links {
       height: 0px;
     }
-    .nav > #nav-check:checked ~ .nav-links {
+    .first-nav > #first-nav-check:checked ~ .first-nav-links {
       height: calc(100vh - 50px);
       overflow-y: auto;
     }
@@ -97,7 +97,7 @@ export default (editor, opts = {}) => {
   bm.add(opts.name, {
     label: `
     
-    <div >
+    <div class="component-svg">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
   </svg>
@@ -107,22 +107,22 @@ export default (editor, opts = {}) => {
     </div> 
     `,
     category: opts.category,
-    content: `  <div class="nav">
-    <input type="checkbox" id="nav-check">
-    <div class="nav-header">
-        <div class="nav-title">
+    content: `  <div class="first-nav">
+    <input type="checkbox" id="first-nav-check">
+    <div class="first-nav-header">
+        <div class="first-nav-title">
             JoGeek
         </div>
     </div>
-    <div class="nav-btn">
-        <label for="nav-check">
+    <div class="first-nav-btn">
+        <label for="first-nav-check">
             <span></span>
             <span></span>
             <span></span>
         </label>
     </div>
 
-    <div class="nav-links">
+    <div class="first-nav-links">
         <a href="//github.io/jo_geek" target="_blank">Github</a>
         <a href="http://stackoverflow.com/users/4084003/" target="_blank">Stackoverflow</a>
         <a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">LinkedIn</a>

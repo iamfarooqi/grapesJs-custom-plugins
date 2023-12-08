@@ -3,8 +3,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import grapesjs from 'grapesjs';
 //@ts-ignore
 import gjsPresetWebPage from 'grapesjs-preset-webpage';
-import navbar from '../components/navbar';
 import testimonial from '../components/testimonials';
+import firstNavbar from '../components/navbars/firstNavbar';
+import secondNavbar from '../components/navbars/secondNavbar';
 
 export default function Editor() {
   const [editor, setEditor] = useState<any>(null);
@@ -12,10 +13,11 @@ export default function Editor() {
   useEffect(() => {
     const editor = grapesjs.init({
       container: '#editor',
-      plugins: [navbar, testimonial],
+      plugins: [firstNavbar, secondNavbar, testimonial],
       pluginsOpts: {
         gjsPresetWebPage: {},
-        navbar: {},
+        firstNavbar: {},
+        secondNavbar: {},
         testimonial: {},
       },
     });

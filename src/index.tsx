@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import 'grapesjs/dist/css/grapes.min.css';
+// import 'grapesjs/dist/css/grapes.min.css';
+import './css/grapes.min.css';
 
 
 ReactDOM.render(
